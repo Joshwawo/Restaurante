@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +11,7 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    
-    
-
+<?php include('headers.html') ?>
         <main>
 
             <div class="contenedor__todo">
