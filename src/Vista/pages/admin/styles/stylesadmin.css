@@ -10,6 +10,7 @@ html{
    background-color: var(--oscuro);
    background-image: url(/Test2/src/Vista/images/home-bg.png);
    background-repeat: no-repeat;
+   font-family: 'Raleway', sans-serif;
 
 
 }
@@ -63,4 +64,13 @@ body{
     text-decoration: underline;
     text-underline-offset: 1rem;
     color: red;
+}
+
+.header{
+    
+    /* border: 1px solid rgb(150, 13, 13); */
+    text-align: center;
+    
+    color: var(--blanco);
+    font-size: bold;
 }
