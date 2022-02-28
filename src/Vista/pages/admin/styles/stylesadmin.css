@@ -7,6 +7,7 @@
 }
 
 html{
+   background-color: white;
    background-color: var(--oscuro);
    background-image: url(/Test2/src/Vista/images/home-bg.png);
    background-repeat: no-repeat;
@@ -14,9 +15,31 @@ html{
 
 
 }
-body{
-    
+.html-bg{
+    background-image: url(/Restaurante/src/Vista/images//home-bg.png);
 }
+
+/* Tabla de datos */
+.tb{
+    background-color: var(--oscuro);
+    margin: 2rem;
+}
+
+.paginate_button {
+    border-radius: 0 !important;
+  }
+
+.tb-bg{
+    padding: 4rem 4rem;
+    background-color:var(--oscuro);
+    color: #ffffff;
+
+}
+.tb-datos{
+    text-align: center;
+    color: var(--blanco);
+}
+/* Terminacion de la tabla */
 
 .contendor{
     margin: auto;
@@ -24,7 +47,7 @@ body{
 }
 
 .nav-bg{
-    background-color: var(--oscuro¿);
+    background-color: var(--oscuro);
 
 }
 
