@@ -2,12 +2,14 @@
     include('../../Modelo/db.php');
     if(isset($_POST['Registrarte'])){
 
+      
+
         /*  Datos de registro*/
         $nombre_completo = $_POST['nombre_completo'];
         $correo_Electronico = $_POST['correo_Electronico'];
         $usuario = $_POST['usuario'];
         $contrasena  = $_POST['contrasena'];
-        $Constrasena_Hash = password_hash($contrasena, PASSWORD_BCRYPT);
+        
         $direccion = $_POST['direccion'];
 /*
         $query = $connection->prepare("SELECT * FROM usuarios WHERE (id_usuario='$usuario')");
@@ -40,7 +42,7 @@
 
 */
         $query_Usuarios = "INSERT INTO usuarios(id_usuario, contrasena, nombreCompleto, correo, direccion)
-        Values ('$usuario', '$Constrasena_Hash', '$nombre_completo', '$correo_Electronico', '$direccion')";
+        Values ('$usuario', '$contrasena', '$nombre_completo', '$correo_Electronico', '$direccion')";
 
         $result_Query = mysqli_query($conn, $query_Usuarios);
 

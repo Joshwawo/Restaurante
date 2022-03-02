@@ -10,6 +10,8 @@
     <title>Menu Admin</title>
     <link rel="stylesheet" href="../styles/normalice.css">
     <link rel="stylesheet" href="../styles/stylesadmin.css">
+    <link rel="stylesheet" href="../styles/sylesadd.css">
+
 
 </head>
 
@@ -32,6 +34,19 @@
     <header class="header">
         <h1>Menús</h1>
     </header>
+
+    <!--Aqui comienza el que agrega productos sin css 10:43 del video-->
+    <div class="container">
+        <section>
+            <form action="../../../../Controlador/admin/add_product.php" method="post" class="add-product-form" enctype="multipart/form-data">
+                <h3> agregar nuevo producto</h3>
+                <input type="text" name="p_name" placeholder="Nombre del producto" class="box" required>
+                <input type="number" name="p_price" placeholder="Precio" class="box" required>
+                <input type="file" name="p_image" accept="image/png, image/jpg, image/jpeg" class="box" required>
+                <input type="submit" value="Agregar el producto" name="add_product" class="btn">
+            </form>
+        </section>
+    </div>
 
 
 
