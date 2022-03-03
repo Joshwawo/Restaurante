@@ -47,6 +47,63 @@
             </form>
         </section>
     </div>
+
+
+    <section class="display-product-table"> 
+        <table>
+
+<thead>
+   <th>imagen del producto</th>
+   <th>Nombre del producto</th>
+   <th>Precio del producto</th>
+   <th>Accion</th>
+</thead>
+
+<tbody>
+   <?php
+        include('../../../../Modelo/db.php');
+      $select_products = mysqli_query($conn, "SELECT * FROM `comidas`");
+      if(mysqli_num_rows($select_products) > 0){
+         while($row = mysqli_fetch_assoc($select_products)){
+   ?>
+
+   <tr>
+      <td><img src="../../../../Modelo/uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
+      <td><?php echo $row['name']; ?></td>
+      <td>$<?php echo $row['price']; ?>/-</td>
+      <td>
+          
+      <a href="../pages/menus.php?delete=" <button class="delete-btn fas fa-trash" onclick="myFunction()">Eliminar</button></a>
+      <a href="../pages/menus.php?edit=" <button class="option-btn fas fa-edit"> Actualizar</button></a>
+      </td>
+                </tr>
+
+
+                <?php
+                    };
+                }else{
+                    echo "<span> no hay productos añadidos</span>";
+                }
+                ?>
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        function myFunction(){
+            if(confirm('Estas seguro que quieres eliminar este producto')) == return true {
+                
+            }
+
+        }
+        </script>
+
+
+
+
+
+
+
 </body>
 
 </html>

@@ -16,7 +16,7 @@
             $message[] = 'producto añadido con exito';
             echo'<script type="text/javascript">
             alert("Producto guardado con exito");
-            window.location.href="../../Vista/pages/admin/pages/menu.html";
+            window.location.href="../../Vista/pages/admin/pages/menu.php";
             </script>';
         }
         else{
