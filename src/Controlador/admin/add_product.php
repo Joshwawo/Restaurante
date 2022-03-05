@@ -22,8 +22,22 @@
         else{
             echo'<script type="text/javascript">
             alert("Hubo un error al cargar el producto");
-            window.location.href="../../Vista/pages/admin/pages/menu.html";
+            window.location.href="../../Vista/pages/admin/pages/menu.php";
             </script>';
+        }
+    };
+
+    if(isset($_GET['delete'])){
+        echo'Hola';
+       /* $delete_id = $_GET['delete'];
+        $delete_query = mysqli_query($conn, "DELETE FROM 'comidas' where id_Comida= '$delete_id'");
+        if($delete_query){
+            $messaegDelete[] = 'Producto eliminado';
+            echo'<script type="text/javascript">
+            alert("Producto eliminado");
+            window.location.href="../../Vista/pages/admin/pages/menu.php";
+            </script>';*/
+
         }
     }
 
