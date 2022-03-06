@@ -1,6 +1,3 @@
-<!-- Conectar Esta Pagina que es el login del admin -->
-<!-- Aqui Falta Mucho Codigo PhP -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,41 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home User</title>
-    <!-- <link rel="stylesheet" href="/Restaurante/src/Vista/pages/users/styles/normalice.css">
-    <link rel="stylesheet" href="/Restaurante/src/Vista/pages/users/styles/stylescliente.css"> -->
     <link rel="stylesheet" href="../styles/normalice.css">
-    <link rel="stylesheet" href="../styles/stylescliente.css">
+    <!-- <link rel="stylesheet" href="../styles/stylescliente.css"> -->
     <link rel="stylesheet" href="/src/Vista/pages/admin/styles/sylesadd.css">
-
-
+    <title>Productos</title>
 </head>
 
 <body>
 
-    <div class="nav-bg">
-        <nav class="navegacion contenedor">
+    <div class="container">
 
-            <a href="../pages/homeuser.html">Inicio</a>
-           
-            <a href="../pages/botusers.html">Ayuda(bot)</a>
-            
-            
-            <a id="lg" href="../../login.html">Cerrar Sesion</a>
-            
-            
-            
-        </nav>
-    </div>
-
-    <header class="headermio">
-        <h1>Bienvenido de Nuevo</h1>
-        <p>¿Que vas a ordenar hoy?!</p>
-    </header>
-
-    <main>
         <section class="products">
-            <h1 class="headermio">Menú</h1>
+            <h1 class="heading">Ultimos Productos</h1>
             <div class="box-container">
                 <!-- Aqui falta codigo PHP -->
                 <!-- Aqui falta codigo PHP -->
@@ -54,7 +28,7 @@
                             <?php echo $fetch_product['price'];?>
                         </h3>
 
-                        <!-- Esto Se tiene que arreglar con php -->
+                        
                         <div class="price">$<?php echo $fetch_product['price']]; ?>/</div>
 
 
@@ -74,13 +48,8 @@
 
             </div>
         </section>
-        
 
-
-    </main>
-
-
-
+    </div>
 
 
 </body>

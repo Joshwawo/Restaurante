@@ -22,6 +22,7 @@ body{
 .contendor{
     margin: auto;
     max-width: 1200px;
+    
 }
 
 .nav-bg{
@@ -33,6 +34,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 2rem;
 
 
 }
@@ -43,7 +45,7 @@ body{
     color: var(--blanco);
     padding: 1rem 2rem;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 40px;
 
 
@@ -68,11 +70,11 @@ body{
 }
 /* Aqui termina el navbar */
 
-.header{
+.headermio{
     
     /* border: 1px solid rgb(150, 13, 13); */
     text-align: center;
-    
     color: var(--blanco);
     font-size: bold;
+    font-size: 2rem;
 }
