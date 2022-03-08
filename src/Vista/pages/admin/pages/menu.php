@@ -66,10 +66,12 @@ if(isset($_POST['update_product'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Admin</title>
+    <!-- <link rel="stylesheet" href="../styles/normalice.css">
+    <link rel="stylesheet" href="../styles/stylesadmin.css">
+    <link rel="stylesheet" href="../styles/sylesadd.css"> -->
     <link rel="stylesheet" href="../styles/normalice.css">
     <link rel="stylesheet" href="../styles/stylesadmin.css">
     <link rel="stylesheet" href="../styles/sylesadd.css">
-
 
 </head>
 
@@ -77,10 +79,9 @@ if(isset($_POST['update_product'])){
 <div class="nav-bg">
         <nav class="navegacion contenedor">
             <a href="../pages/homepage.html">Inicio</a>
-            <a href="../pages/userdata.htm">Datos Pendientes</a>
-            <a href="../pages/users.html">Usuarios</a>
+            <a href="../pages/userdata.html">Datos Pendientes</a>
             <a href="../pages/menu.php">Menús</a>
-            <a href="../pages/bot.html">Ayuda</a>
+            
             <a id="lg" href="../../login.html">Cerrar Sesion</a>
             <!--Se va a quedar pendiente  -->
 
@@ -88,7 +89,7 @@ if(isset($_POST['update_product'])){
         </nav>
     </div>
 
-    <header class="header">
+    <header style="background: none;" class="header ">
         <h1>Menús</h1>
     </header>
 

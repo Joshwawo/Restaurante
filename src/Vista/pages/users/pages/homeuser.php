@@ -23,9 +23,9 @@
     <div class="nav-bg">
         <nav class="navegacion contenedor">
 
-            <a href="../pages/homeuser.html">Inicio</a>
+            <a href="../pages/homeuser.php">Inicio</a>
            
-            <a href="../pages/botusers.html">Ayuda(bot)</a>
+            <a href="../pages/ayuda.html">Ayuda(bot)</a>
             
             
             <a id="lg" href="../../login.html">Cerrar Sesion</a>
@@ -55,15 +55,15 @@
                         </h3>
 
                         <!-- Esto Se tiene que arreglar con php -->
-                        <div class="price">$<?php echo $fetch_product['price']]; ?>/</div>
+                        <div class="price">$<?php echo $fetch_product['price']; ?>/</div>
 
 
                         <!-- Codigo PHP -->
-                        <input type=" hidden" name="product_name" value="<?php echo $fetch_product['name']; ?
-                        >">
+                        <input type=" hidden" name="product_name" value="<?php echo $fetch_product['name'];
+                        ?>">
                         <input type="hidden" name="product_price" value="<?php echo $fetch_product['price'];
                         ?>">
-                        <input type="hidden" name="product_image" value="<?php echo $fetch_product['image ];
+                        <input type="hidden" name="product_image" value="<?php echo $fetch_product['image'];
                         ?>">
                         <input type="submit" class="btn" value="add to cart" name="add_to_cart">
 

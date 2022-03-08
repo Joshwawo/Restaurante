@@ -27,7 +27,7 @@
                                                 
                     }
                     else{
-                        header("Location: ../../Vista/pages/users/pages/homeuser.html");
+                        header("Location: ../../Vista/pages/users/pages/homeuser.php");
                     }
                 }
                 else{
