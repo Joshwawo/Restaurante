@@ -78,11 +78,11 @@ if(isset($_POST['update_product'])){
 <body>
 <div class="nav-bg">
         <nav class="navegacion contenedor">
-            <a href="../pages/homepage.html">Inicio</a>
-            <a href="../pages/userdata.html">Datos Pendientes</a>
-            <a href="../pages/menu.php">Menús</a>
+            <a style="font-size: 2rem;" href="../pages/homepage.html">Inicio</a>
+            <a style="font-size: 2rem;" href="../pages/userdata.html">Datos Pendientes</a>
+            <a style="font-size: 2rem;" href="../pages/menu.php">Menús</a>
             
-            <a id="lg" href="../../login.html">Cerrar Sesion</a>
+            <a style="font-size: 2rem;" id="lg" href="../../login.html">Cerrar Sesion</a>
             <!--Se va a quedar pendiente  -->
 
 
@@ -135,11 +135,11 @@ if(isset($message)){
             if(mysqli_num_rows($select_products) > 0){
                while($row = mysqli_fetch_assoc($select_products)){
          ?>
-
-         <tr>
-            <td><img src="../../../../Modelo/uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
-            <td><?php echo $row['name']; ?></td>
-            <td>$<?php echo $row['price']; ?>/-</td>
+            <!-- #373833 -->
+         <tr style="background-color: #191919">
+            <td ><img src="../../../../Modelo/uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
+            <td style="color: white;"><?php echo $row['name']; ?></td>
+            <td style="color: white;">$<?php echo $row['price']; ?>/-</td>
             <td>
                <a href="menu.php?delete=<?php echo $row['id_Comida']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash"></i> Borrar </a>
                <a href="menu.php?edit=<?php echo $row['id_Comida']; ?>" class="option-btn"> <i class="fas fa-edit"></i> Actualizar </a>

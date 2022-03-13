@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600&display=swap");
+
 * {
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-decoration: none;
   outline: none;
   border: none;
@@ -84,11 +85,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -128,7 +129,7 @@ section {
   top: 3rem;
   left: 48.5%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .header .logo img {
@@ -143,20 +144,20 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: #000;
   position: absolute;
   top: 99%;
   left: 0;
   right: 0;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .header .search-form.active {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .header .search-form input {
@@ -169,7 +170,7 @@ section {
 
 .header .fa-times {
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .home {
@@ -206,7 +207,7 @@ section {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 2rem;
 }
 
@@ -243,7 +244,7 @@ section {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 2rem;
 }
 
@@ -253,7 +254,7 @@ section {
 
 .menu .box-container .box:hover img {
   -webkit-transform: translateY(1rem);
-          transform: translateY(1rem);
+  transform: translateY(1rem);
 }
 
 .menu .box-container .box img {
@@ -290,17 +291,17 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 3rem;
 }
 
 .about .image {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
+  -ms-flex: 1 1 40rem;
+  flex: 1 1 40rem;
 }
 
 .about .image img {
@@ -309,8 +310,8 @@ section {
 
 .about .content {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
+  -ms-flex: 1 1 40rem;
+  flex: 1 1 40rem;
 }
 
 .about .content .title {
@@ -331,7 +332,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 1.5rem;
   margin-bottom: 2rem;
   margin-top: 1rem;
@@ -339,8 +340,8 @@ section {
 
 .about .content .icons h3 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 16rem;
-          flex: 1 1 16rem;
+  -ms-flex: 1 1 16rem;
+  flex: 1 1 16rem;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #fff;
@@ -355,7 +356,7 @@ section {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 2rem;
 }
 
@@ -398,21 +399,21 @@ section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 3rem;
 }
 
 .contact .row .map {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
+  -ms-flex: 1 1 40rem;
+  flex: 1 1 40rem;
   width: 100%;
 }
 
 .contact .row .form {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
+  -ms-flex: 1 1 40rem;
+  flex: 1 1 40rem;
 }
 
 .contact .row .form .icons-container {
@@ -420,15 +421,15 @@ section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 3rem;
 }
 
 .contact .row .form .icons-container .icons {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 17rem;
-          flex: 1 1 17rem;
+  -ms-flex: 1 1 17rem;
+  flex: 1 1 17rem;
   text-align: center;
 }
 
@@ -484,7 +485,7 @@ section {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 2rem;
 }
 
@@ -494,12 +495,12 @@ section {
 
 .blogs .box-container .box:hover .image img {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .blogs .box-container .box:hover .image .icons {
   -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 .blogs .box-container .box .image {
@@ -513,11 +514,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 2rem;
   background: #000;
   position: absolute;
@@ -526,7 +527,7 @@ section {
   right: 0;
   z-index: 10;
   -webkit-transform: translateY(10rem);
-          transform: translateY(10rem);
+  transform: translateY(10rem);
 }
 
 .blogs .box-container .box .image .icons a {
@@ -547,7 +548,7 @@ section {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .blogs .box-container .box .content {
@@ -593,6 +594,7 @@ section {
   .header {
     padding: 3rem;
   }
+
   section {
     padding: 3rem 2rem;
   }
@@ -602,20 +604,24 @@ section {
   html {
     font-size: 55%;
   }
+
   .header {
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     gap: 2rem;
   }
+
   .header .logo {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     left: 3rem;
   }
+
   .header #menu-btn {
     display: inline-block;
   }
+
   .header .navbar {
     position: absolute;
     top: 99%;
@@ -623,16 +629,19 @@ section {
     right: 0;
     background: #000;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
+
   .header .navbar.active {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+
   .header .navbar a {
     display: block;
     margin: 3rem 2rem;
   }
+
   .header .navbar .space {
     display: none;
   }
@@ -649,4 +658,5 @@ section {
     font-size: 50%;
   }
 }
+
 /*# sourceMappingURL=style.css.map */

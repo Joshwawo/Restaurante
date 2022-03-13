@@ -8,7 +8,7 @@
 }
 
 html {
-    background-color: var(--oscuro);
+    background-color: orange;
     background-image: url(/Test2/src/Vista/images/home-bg.png);
     background-repeat: no-repeat;
     font-family: 'Raleway', sans-serif;
@@ -18,6 +18,11 @@ html {
 }
 
 body {}
+
+img{
+    width: 100%;
+    
+}
 
 /* Esto es solo para el navbar */
 .contendor {
@@ -46,7 +51,7 @@ body {}
     color: var(--blanco);
     padding: 1rem 2rem;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 40px;
 
 
@@ -76,8 +81,36 @@ body {}
     /* LLego Hasta aqui? */
     /* border: 1px solid rgb(150, 13, 13); */
     text-align: center;
-    /* color: var(--blanco); */
-    color: rebeccapurple;
+    color: var(--blanco);
     font-size: bold;
     font-size: 1rem;
 }
+
+
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+/**Media querys  */
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .products .box-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
