@@ -47,7 +47,7 @@ if (isset($_POST['order_btn'])) {
            <h3>Gracias Por Tu Compra!</h3>
            <div class='order-detail'>
               <span>" . $total_product . "</span>
-              <span class='total'>Su total : $" . $price_total . "/-  </span>
+              <span class='total'>Su total : $" . $price_total . " Mxn.  </span>
            </div>
            <div class='customer-details'>
               <p> Tu Nombre : <span>" . $name . "</span> </p>
@@ -56,7 +56,7 @@ if (isset($_POST['order_btn'])) {
               <p> Tu Direccion : <span>" . $flat . ", " . $street . ", " . $city . ", - " . $pin_code . "</span> </p>
               <p> Mensaje : <span>" . $country . "</span> </p>
               <p> Tu Metodo De Pago : <span>" . $method . "</span> </p>
-              <p>(*Paga Cuanto El Producto Llegue*)</p>
+              <p style='font-weight:bold' >(*Paga Cuanto El Producto Llegue*)</p>
            </div>
               <a href='../../../pages/users/pages/homeuser.php' class='btn'>Continuar Comprando</a>
            </div>
@@ -91,7 +91,7 @@ if (isset($_POST['order_btn'])) {
         <section class="checkout-form">
             <nav class="heading__mio">
                 <a class="heading__mio" href="../pages/homeuser.php">Inicio</a>
-                <a class="heading__mio" href="../pages/ashuda.html">Ayuda</a>
+                <a class="heading__mio" href="../pages/ashuda.php">Ayuda</a>
                 <?php
                 $select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
 
@@ -100,7 +100,7 @@ if (isset($_POST['order_btn'])) {
                  */
                 $row_count = mysqli_num_rows($select_rows);
                 ?>
-                <a href="cart.php" class="cart">carrito <span>(<?php echo $row_count; ?>)</span> </a>
+                <a href="cart.php" class="cart">carrito <span>(🛒<?php echo $row_count; ?>)</span> </a>
                 <a id="lg" href="../../login.html">Cerrar Sesion</a>
             </nav>
 

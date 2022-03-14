@@ -54,11 +54,6 @@ if (isset($_POST['add_to_cart'])) {
     };
 
     ?>
-
-
-
-
-
     <main>
 
         <div class="container">
@@ -79,54 +74,12 @@ if (isset($_POST['add_to_cart'])) {
                 <a class="heading__mio" id="lg" href="../../login.html">Cerrar Sesion</a>
             </nav>
             <header class="headermio">
-                <h1 class="headermio--h1">Bienvenido de Nuevo</h1>
-                <p class="headermio--p">¿Que vas a ordenar hoy?!</p>
+                <h1 class="headermio--h1">¿Necesitas Ayuda?</h1>
+                <p class="headermio--p">¡Talvez esto puede ayudarte!</p>
 
             </header>
 
-            <section class="products">
-                <!-- Cambiar el color  -->
-                <h2 class="heading">Nuestro Menú</h2>
 
-                <div class="box-container">
-
-                    <?php
-
-                    /**
-                     * Esta variable selecciona la tabla de "Comidas" desde la base de datos 
-                     */
-                    $select_comidas = mysqli_query($conn, "SELECT * FROM `comidas`");
-                    if (mysqli_num_rows($select_comidas) > 0) {
-                        while ($fetch_comida = mysqli_fetch_assoc($select_comidas)) {
-
-                    ?>
-                            <form action="" method="post">
-
-                                <div class="box">
-                                    <img src="../../../../Modelo/uploaded_img/<?php echo $fetch_comida['image']; ?>" alt="Hola soy una imagen">
-                                    <h3><?php echo $fetch_comida['name']; ?></h3>
-                                    <div class="price">$<?php echo $fetch_comida['price']; ?> Mxn.</div>
-                                    <input type="hidden" name="product_name" value="<?php echo $fetch_comida['name']; ?>">
-                                    <input type="hidden" name="product_price" value="<?php echo $fetch_comida['price']; ?>">
-                                    <input type="hidden" name="product_image" value="<?php echo $fetch_comida['image']; ?>">
-
-
-                                    <input type="submit" class="btn" value="Agregar al Carrito" name="add_to_cart">
-                                </div>
-
-                            </form>
-
-                    <?php
-                        };
-                    };
-                    ?>
-
-
-
-
-                </div>
-
-            </section>
         </div>
 
 

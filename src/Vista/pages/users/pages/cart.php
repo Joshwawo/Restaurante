@@ -33,7 +33,7 @@ if (isset($_GET['delete_all'])) {
 ?>
 
 <!DOCTYPE html>
-<html style="background-color: orange;" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -51,7 +51,7 @@ if (isset($_GET['delete_all'])) {
 
             <a class="heading__mio" href="../pages/homeuser.php">Inicio</a>
 
-            <a class="heading__mio" href="../pages/ashuda.html">Ayuda</a>
+            <a class="heading__mio" href="../pages/ashuda.php">Ayuda</a>
 
             <?php
             /**
@@ -66,13 +66,13 @@ if (isset($_GET['delete_all'])) {
 
             ?>
 
-            <a href="cart.php" class="cart">carrito <span>(<?php echo $row_count; ?>)</span> </a>
+            <a href="cart.php" class="cart">carrito <span>(🛒<?php echo $row_count; ?>)</span> </a>
             <a id="lg" href="../../login.html">Cerrar Sesion</a>
 
         </nav>
 
         <section class="shopping-cart">
-            <h1 class="heading"> Carrito de compras</h1>
+            <h1 class="heading">Tu Carrito de compras</h1>
 
             <table>
 

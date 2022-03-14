@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
 
 :root {
    /* --blue:#2980b9; */
@@ -8,16 +8,17 @@
    --red: tomato;
    --orange: orange;
    --black: #333;
+   --oscuro: #0c0d0d;
    --white: #fff;
    --bg-color: #eee;
    --dark-bg: rgba(0, 0, 0, .7);
    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-   --border: .1rem solid #999;
+   --border: .1rem solid #333;
 }
 
 * {
    /* font-family: 'Poppins', sans-serif; */
-   font-family: 'Nanum Gothic', sans-serif;
+   font-family: 'Montserrat', sans-serif;
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -32,6 +33,7 @@
 html {
    font-size: 62.5%;
    overflow-x: hidden;
+   background-color: #0c0d0d;
 }
 
 .container {
@@ -46,24 +48,55 @@ section {
 
 .heading {
    text-align: center;
-   font-size: 3.5rem;
+   font-size: 2rem;
+   text-transform: uppercase;
+   color: white;
+   margin-bottom: 2rem;
+}
+.headermio--h1{
+   font-size: 3rem;
+   text-transform: uppercase;
+   color: white;
+   margin-bottom: 2rem;
+}
+
+.headermio--p{
+   font-size: 1.5rem;
    text-transform: uppercase;
    color: white;
    margin-bottom: 2rem;
 }
 
 .heading__mio{
-   text-align: center;
-   font-size: 2rem;
+   display: flex;
+   justify-content: center;
+   text-align: space-between;
+   /* font-size: 2rem; */
    text-transform: uppercase;
    color: var(--orange);
+   gap: 4rem;
+   padding-bottom: 1rem;
+   
 
 }
 
 .heading__mio a{
-   text-align: center;
+   /* text-align: center; */
+   color: white;
+   padding-top: 1rem;
+   font-size: 1.8rem;
+
    text-transform: uppercase;
-   color: red;
+   /* color: red; */
+
+}
+
+.heading__mio a:hover{
+   color: var(--orange);
+   text-decoration: underline;
+   text-underline-offset: 1rem;
+
+   
 
 }
 
@@ -77,7 +110,8 @@ section {
    width: 100%;
    text-align: center;
    background-color: var(--blue);
-   color: var(--white);
+   color: var(--oscuro);
+   font-weight: bold;
    font-size: 1.7rem;
    padding: 1.2rem 3rem;
    border-radius: .5rem;
@@ -85,10 +119,18 @@ section {
    margin-top: 1rem;
 }
 
-.btn:hover,
-.option-btn:hover,
+.btn:hover{
+   background-color: var(--orange);
+   color: var(--oscuro);
+}
+.option-btn:hover{
+   background-color: orange;
+   color: var(--oscuro);
+}
+
+
 .delete-btn:hover {
-   background-color: var(--black);
+   background-color: #FF0006;
 }
 
 .option-btn i,
@@ -97,7 +139,7 @@ section {
 }
 
 .option-btn {
-   background-color: var(--orange);
+   background-color: var(--blue);
 }
 
 .delete-btn {
@@ -313,12 +355,12 @@ section {
 .products .box-container .box h3 {
    margin: 1rem 0;
    font-size: 2.5rem;
-   color: var(--black);
+   color: white;
 }
 
 .products .box-container .box .price {
-   font-size: 2.5rem;
-   color: var(--black);
+   font-size: 2rem;
+   color: white;
 }
 
 .shopping-cart table {
@@ -337,7 +379,7 @@ section {
    border-bottom: var(--border);
    padding: 1.5rem;
    font-size: 2rem;
-   color: var(--black);
+   color: white;
 }
 
 .shopping-cart table input[type="number"] {
@@ -352,16 +394,16 @@ section {
    padding: .5rem 1.5rem;
    cursor: pointer;
    font-size: 2rem;
-   background-color: var(--orange);
-   color: var(--white);
+   background-color: var(--blue);
+   color: var(--oscuro);
 }
 
 .shopping-cart table input[type="submit"]:hover {
-   background-color: var(--black);
+   background-color: orange;
 }
 
 .shopping-cart table .table-bottom {
-   background-color: var(--bg-color);
+   background-color: var(--oscuro);
 }
 
 .shopping-cart .checkout-btn {
@@ -439,8 +481,8 @@ section {
 
 .display-order span.grand-total {
    width: 100%;
-   background-color: var(--red);
-   color: var(--white);
+   background-color: var(--blue);
+   color: var(--oscuro);
    padding: 1rem;
    margin-top: 1rem;
 }
@@ -505,8 +547,8 @@ section {
 
 .order-message-container .message-container .order-detail span.total {
    display: block;
-   background: var(--red);
-   color: var(--white);
+   background: var(--blue);
+   color: var(--oscuro);
 }
 
 .order-message-container .message-container .customer-details {
@@ -520,7 +562,8 @@ section {
 }
 
 .order-message-container .message-container .customer-details p span {
-   color: var(--blue);
+   color: var(--oscuro);
+   font-weight: bold;
    padding: 0 .5rem;
    text-transform: none;
 }

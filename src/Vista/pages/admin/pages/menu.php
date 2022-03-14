@@ -151,7 +151,7 @@ if (isset($_POST['update_product'])) {
                      <tr style="background-color: #191919">
                         <td><img src="../../../../Modelo/uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
                         <td style="color: white;"><?php echo $row['name']; ?></td>
-                        <td style="color: white;">$<?php echo $row['price']; ?>/-</td>
+                        <td style="color: white;">$<?php echo $row['price']; ?> Mxn.</td>
                         <td>
                            <a href="menu.php?delete=<?php echo $row['id_Comida']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash"></i> Borrar </a>
                            <a href="menu.php?edit=<?php echo $row['id_Comida']; ?>" class="option-btn"> <i class="fas fa-edit"></i> Actualizar </a>
