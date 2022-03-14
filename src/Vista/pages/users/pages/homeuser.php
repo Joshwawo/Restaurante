@@ -54,37 +54,35 @@ if (isset($_POST['add_to_cart'])) {
     ?>
 
 
-    <div class="nav-bg">
-        <nav class="navegacion contenedor">
-
-            <a href="../pages/homeuser.php">Inicio</a>
-
-            <a href="../pages/ashuda.html">Ayuda</a>
-
-            <?php
-
-            $select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
-            $row_count = mysqli_num_rows($select_rows);
-
-            ?>
-
-            <a href="cart.php" class="cart">carrito <span>(<?php echo $row_count; ?>)</span> </a>
-            <a id="lg" href="../../login.html">Cerrar Sesion</a>
 
 
-
-        </nav>
-    </div>
-
-    <header class="headermio">
-        <h1>Bienvenido de Nuevo</h1>
-        <p>¿Que vas a ordenar hoy?!</p>
-        <h1 class="headermio">Menú</h1>
-    </header>
 
     <main>
 
         <div class="container">
+            <nav class="heading__mio">
+
+                <a class="heading__mio" href="../pages/homeuser.php">Inicio</a>
+
+                <a class="heading__mio" href="../pages/ashuda.html">Ayuda</a>
+
+                <?php
+
+                $select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
+                $row_count = mysqli_num_rows($select_rows);
+
+                ?>
+
+                <a href="cart.php" class="cart">carrito <span>(<?php echo $row_count; ?>)</span> </a>
+                <a id="lg" href="../../login.html">Cerrar Sesion</a>
+
+            </nav>
+            <header class="headermio">
+                <h1>Bienvenido de Nuevo</h1>
+                <p>¿Que vas a ordenar hoy?!</p>
+                <h1 class="headermio">Menú</h1>
+            </header>
+
             <section class="products">
                 <!-- Cambiar el color  -->
                 <h1 class="heading">Ultimo agregados</h1>
@@ -110,7 +108,7 @@ if (isset($_POST['add_to_cart'])) {
                                     <input type="hidden" name="product_image" value="<?php echo $fetch_comida['image']; ?>">
 
 
-                                    <input type="submit" class="btn" value="add to cart" name="add_to_cart">
+                                    <input type="submit" class="btn" value="Agregar al Carrito" name="add_to_cart">
                                 </div>
 
                             </form>

@@ -1,6 +1,9 @@
 <?php
     include('../../Modelo/db.php');
 
+    /**
+     * Esta condicional tiene la funcionalidad de agregar un nombre, precio, imagen, y una carpeta donde se almacenan las imagenes
+     */
     if(isset($_POST['add_product'])){
         $p_name = $_POST['p_name'];
         $p_price = $_POST['p_price'];
