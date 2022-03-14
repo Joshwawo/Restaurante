@@ -10,7 +10,9 @@ if (isset($_POST['add_to_cart'])) {
     $product_quantity = 1;
 
     $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
-
+    /**
+     * Esta condicional if, hace referencia a que ya se a seleccionado el producto y nos mostrara un mensa "Producto ya agregado al carrito", no nos dejara agarrarlo otra vez, y la condicional else hace refencia a que si no esta en el carrito nos dejara agregarlo al carrrito de compras y nos aparecera el mensaje "Producto Agregado Correctamente"
+     */
     if (mysqli_num_rows($select_cart) > 0) {
         $message[] = 'Producto ya agregado al carrito';
     } else {
@@ -67,8 +69,15 @@ if (isset($_POST['add_to_cart'])) {
                 <a class="heading__mio" href="../pages/ashuda.html">Ayuda</a>
 
                 <?php
+                /**
+                 *La variable $select_rows seleciona nuestra tabla llamada "Cart" de nuestra base de datos y si no encuentra la tabla nos mandara un error de fallo de consulta
 
+                 */
                 $select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
+                /**
+                 * Esta variable es el contador de los productos que se han agregado al carrito
+
+                 */
                 $row_count = mysqli_num_rows($select_rows);
 
                 ?>
@@ -91,7 +100,9 @@ if (isset($_POST['add_to_cart'])) {
 
                     <?php
 
-
+                    /**
+                     * Esta variable selecciona la tabla de "Comidas" desde la base de datos 
+                     */
                     $select_comidas = mysqli_query($conn, "SELECT * FROM `comidas`");
                     if (mysqli_num_rows($select_comidas) > 0) {
                         while ($fetch_comida = mysqli_fetch_assoc($select_comidas)) {

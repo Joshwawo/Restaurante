@@ -2,6 +2,9 @@
 
 include('../../../../Modelo/db.php');
 
+/**
+ * Esta condicional tiene la funcionalidad de actualizar la cantidad de productos agregados al carrito de compra  
+ */
 if (isset($_POST['update_update_btn'])) {
     $update_value = $_POST['update_quantity'];
     $update_id = $_POST['update_quantity_id'];
@@ -12,6 +15,9 @@ if (isset($_POST['update_update_btn'])) {
     };
 };
 
+/**
+ * Esta condicional tiene la funcionalidad de eliminar N elementros del carrito de compras para que se refleje en la base de datos
+ */
 if (isset($_GET['remove'])) {
     $remove_id = $_GET['remove'];
     mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$remove_id'");
@@ -48,11 +54,13 @@ if (isset($_GET['delete_all'])) {
             <a class="heading__mio" href="../pages/ashuda.html">Ayuda</a>
 
             <?php
-
+            /**
+             * La variable $select_rows seleciona nuestra tabla llamada "Cart" de nuestra base de datos,  y una condicional que si preciona el boton eliminar todo se va eliminar todo lo que hay en nuestro carrito de compras
+             */
             $select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
 
             /**
-             * Esta variable es el contador de cuan
+             * Esta variable es el contador de los productos que se han agregado al carrito
              */
             $row_count = mysqli_num_rows($select_rows);
 
@@ -80,6 +88,9 @@ if (isset($_GET['delete_all'])) {
                 <tbody>
                     <?php
 
+                    /**
+                     * La variable $select_cart seleciona nuestra tabla llamada "Cart" de nuestra base de datos
+                     */
                     $select_cart = mysqli_query($conn, "SELECT * FROM `cart`");
                     /**
                      * Esta variable es el precio total a pagar por el cliente - se inicia en cero porque no hay nada en el carrito

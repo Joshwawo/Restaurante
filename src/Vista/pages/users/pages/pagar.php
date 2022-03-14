@@ -2,6 +2,19 @@
 
 include('../../../../Modelo/db.php');
 
+/**
+ *La variable $select_rows seleciona nuestra tabla llamada "Cart" de nuestra base de datos,  y una condicional que si se preciona un boton nos llevaria a la pagina de pagar, y introduceriamos todos nuestros informacion del pedido
+    $name = $_POST['name'];
+    $number = $_POST['number'];
+    $email = $_POST['email'];
+    $method = $_POST['method'];
+    $ad1 = $_POST['address1'];
+    $ad2 = $_POST['adress2'];
+    $city = $_POST['colony'];
+    $pc = $_POST['pc'];
+    $message = $_POST['message'];
+    
+ */
 if (isset($_POST['order_btn'])) {
     $name = $_POST['name'];
     $number = $_POST['number'];
@@ -34,7 +47,7 @@ if (isset($_POST['order_btn'])) {
            <h3>Gracias Por Tu Compra!</h3>
            <div class='order-detail'>
               <span>" . $total_product . "</span>
-              <span class='total'> total : $" . $price_total . "/-  </span>
+              <span class='total'>Su total : $" . $price_total . "/-  </span>
            </div>
            <div class='customer-details'>
               <p> Tu Nombre : <span>" . $name . "</span> </p>
@@ -81,6 +94,10 @@ if (isset($_POST['order_btn'])) {
                 <a class="heading__mio" href="../pages/ashuda.html">Ayuda</a>
                 <?php
                 $select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
+
+                /**
+                 * Esta variable es el contador de los productos que se han agregado al carrito
+                 */
                 $row_count = mysqli_num_rows($select_rows);
                 ?>
                 <a href="cart.php" class="cart">carrito <span>(<?php echo $row_count; ?>)</span> </a>
@@ -91,9 +108,18 @@ if (isset($_POST['order_btn'])) {
             <form action="" method="POST">
                 <div class="display-order">
                     <?php
+                    /**
+                     * La variable $select_rows selecciona nuestra tabla llamada "Cart" de nuestra base de datos.
 
+                     */
                     $select_cart = mysqli_query($conn, "SELECT * FROM `cart`");
+                    /**
+                     * Esta variable almacena el total final que el cliente va a pagar
+                     */
                     $total = 0;
+                    /**
+                     * Esta variable es el precio total a pagar por el cliente en la pantalla de pagar
+                     */
                     $grand_total = 0;
 
                     if (mysqli_num_rows($select_cart) > 0) {
@@ -105,7 +131,12 @@ if (isset($_POST['order_btn'])) {
                             <span><?= $fetch_cart['name']; ?>(<?= $fetch_cart['quantity']; ?>)</span>
                     <?php
                         }
+                        /**
+                         *Esta condicional else, hace referencia que si no hay productos agregados al carrito de compras nos saldra un aviso que el carrito de compras esta vacio y no dejara hacer la compra si esta vacio
+
+                         */
                     } else {
+
                         echo "<div class='display-order'><span>Tu Carrito Esta Vacio</span></div>";
                     }
                     ?>
