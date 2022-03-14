@@ -8,7 +8,7 @@
 }
 
 html {
-    background-color: orange;
+    background-color: var(--oscuro);
     background-image: url(/Test2/src/Vista/images/home-bg.png);
     background-repeat: no-repeat;
     font-family: 'Raleway', sans-serif;
@@ -20,7 +20,7 @@ html {
 body {}
 
 img{
-    width: 100%;
+    max-width: 100%;
     
 }
 
