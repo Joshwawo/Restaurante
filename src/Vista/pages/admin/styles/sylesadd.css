@@ -403,6 +403,16 @@ section {
    padding: 1.5rem;
    font-size: 2rem;
    color: white;
+
+}
+
+.td__admin{
+   border-bottom: var(--border);
+   padding: 1.5rem;
+   font-size: 2rem;
+   color: white;
+   
+
 }
 
 .shopping-cart table input[type="number"] {

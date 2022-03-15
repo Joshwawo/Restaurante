@@ -87,7 +87,7 @@ if (isset($_POST['update_product'])) {
 <body>
    <div class="nav-bg">
       <nav class="heading__mio ">
-         <a style="font-size: 2rem;" href="../pages/homepage.html">Inicio</a>
+         <a style="font-size: 2rem;" href="../pages/homepage.php">Inicio</a>
          <a style="font-size: 2rem;" href="../pages/userdata.html">Datos Pendientes</a>
          <a style="font-size: 2rem;" href="../pages/menu.php">Menús</a>
 
@@ -98,7 +98,7 @@ if (isset($_POST['update_product'])) {
       </nav>
    </div>
 
-         <h1 style="color: white; text-align:center">Menú</h1>
+   <h1 style="color: white; text-align:center">Menú</h1>
 
    <?php
 

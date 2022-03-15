@@ -22,7 +22,7 @@
 
                 if($constrasena == $stringHash){
                     if($Correo_Usuario == 'Don Burritos' || $Correo_Usuario == 'adrian28588@gmail.com'){
-                            header("Location: ../../Vista/pages/admin/pages/homepage.html");
+                            header("Location: ../../Vista/pages/admin/pages/homepage.php");
                             exit();
                                                 
                     }
