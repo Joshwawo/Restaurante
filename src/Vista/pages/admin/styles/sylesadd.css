@@ -603,7 +603,41 @@ section {
    padding: 0 .5rem;
    text-transform: none;
 }
+.dataTable-info{
+   font-size: 1.5rem;
+   color: white;
+}
 
+/* .dataTable-dropdown{
+   font-size: 1.5rem;
+   color: white;
+} */
+
+.dataTable-dropdown label{
+   font-size: 1.5rem;
+   color: rgb(255, 255, 255);
+}
+
+.dataTable-input{
+   font-size: 1.5rem;
+}
+
+.td__admin{
+   background-color: var(--dark-bg) ;
+   opacity: 0.9;
+}
+.active{
+   font-size: 1.5rem;
+   background-color: #FF0006;
+}
+#text{
+   font-size: 1.5rem;
+   color: red;
+}
+/* .dataTable-selector{
+   font-size: 1.5rem;
+   color: white;
+} */
 /* media queries  */
 
 @media (max-width:1200px) {

@@ -25,14 +25,10 @@ if (isset($_GET['delete_all'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page Admin</title>
-    <!-- <link rel="stylesheet" href="../styles/normalice.css">
-    <link rel="stylesheet" href="../styles/stylesadmin.css">
-    <link rel="stylesheet" href="../styles/sylesadd.css"> -->
     <link rel="stylesheet" href="../styles/normalice.css">
-    <!-- <link rel="stylesheet" href="../styles/stylesadmin.css"> -->
-
-    <!-- <link rel="stylesheet" href="../styles/sylesadd.css"> -->
     <link rel="stylesheet" href="../../admin/styles/sylesadd.css">
+    <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -50,9 +46,9 @@ if (isset($_GET['delete_all'])) {
         </nav>
 
         <section class="shopping-cart">
-            <h1 class="heading">Admin Panel</h1>
+            <h1 class="heading">Admin Panel <br>De Pedidos</h1>
 
-            <table>
+            <table class="tabla" >
 
                 <thead>
                     <th>Nombre</th>
@@ -74,7 +70,7 @@ if (isset($_GET['delete_all'])) {
                      * La variable $select_cart seleciona nuestra tabla llamada "Cart" de nuestra base de datos
                      */
                     $select_cart = mysqli_query($conn, "SELECT * FROM `order`");
-                    
+
 
                     /**
                      * Esta variable es el precio total a pagar por el cliente - se inicia en cero porque no hay nada en el carrito
@@ -85,15 +81,15 @@ if (isset($_GET['delete_all'])) {
                     ?>
 
                             <tr>
-                                <td class="td__admin" ><?php echo $fetch_cart['name'] ?></td>
-                                <td class="td__admin" ><?php echo $fetch_cart['method'] ?></td>
-                                <td class="td__admin" ><?php echo $fetch_cart['flat'] ?></td>
-                                <td class="td__admin" ><?php echo $fetch_cart['city'] ?></td>
-                                <td class="td__admin" ><?php echo $fetch_cart['country'] ?></td>
-                                <td class="td__admin" ><?php echo $fetch_cart['total_products'] ?></td>
+                                <td class="td__admin"><?php echo $fetch_cart['name'] ?></td>
+                                <td class="td__admin"><?php echo $fetch_cart['method'] ?></td>
+                                <td class="td__admin"><?php echo $fetch_cart['flat'] ?></td>
+                                <td class="td__admin"><?php echo $fetch_cart['city'] ?></td>
+                                <td class="td__admin"><?php echo $fetch_cart['country'] ?></td>
+                                <td class="td__admin"><?php echo $fetch_cart['total_products'] ?></td>
 
-                                <td class="td__admin" ><?php echo $fetch_cart['total_price'] ?> Mxn.</td>
-                                <td class="td__admin" ><a href="?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('¿Estas Seguro de eliminar esto del carrito?')" class="delete-btn"> <i class="fas fa-trash"></i> Eliminar</a></td>
+                                <td class="td__admin"><?php echo $fetch_cart['total_price'] ?> Mxn.</td>
+                                <td class="td__admin"><a href="?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('¿Estas Seguro de eliminar esto del carrito?')" class="delete-btn"> <i class="fas fa-trash"></i> Eliminar</a></td>
 
                             </tr>
 
@@ -102,11 +98,8 @@ if (isset($_GET['delete_all'])) {
                         };
                     };
                     ?>
-                    
+
                 </tbody>
-
-
-
             </table>
 
 
@@ -118,10 +111,19 @@ if (isset($_GET['delete_all'])) {
 
     </div>
 
+    <!-- <script src="../../.././pages/admin/pages/tabla.js"></script> -->
+    <script src="../../admin/pages/tabla.js"></script>
 
+    <!-- <script>
 
+        var tabla = document.querySelector("#tabla");
+        var dataTable = new DataTable(tabla,{
+            perPage:3,
+            perPageSelect:[3,6,9,12]
+        });
 
-
+    </script> -->
+    
 
 </body>
 
