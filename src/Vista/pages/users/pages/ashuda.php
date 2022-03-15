@@ -24,7 +24,7 @@ if (isset($_POST['add_to_cart'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="ashuda" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -35,7 +35,7 @@ if (isset($_POST['add_to_cart'])) {
     <link rel="stylesheet" href="/Restaurante/src/Vista/pages/users/styles/stylescliente.css"> -->
     <link rel="stylesheet" href="../styles/normalice.css">
     <!-- <link rel="stylesheet" href="../styles/stylescliente.css"> -->
-    <link rel="stylesheet" href="../styles/stails.css">
+    <!-- <link rel="stylesheet" href="../styles/stails.css"> -->
 
     <link rel="stylesheet" href="../../admin/styles/sylesadd.css">
 

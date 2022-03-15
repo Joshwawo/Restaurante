@@ -79,14 +79,14 @@ if (isset($_POST['update_product'])) {
     <link rel="stylesheet" href="../styles/stylesadmin.css">
     <link rel="stylesheet" href="../styles/sylesadd.css"> -->
    <link rel="stylesheet" href="../styles/normalice.css">
-   <link rel="stylesheet" href="../styles/stylesadmin.css">
+   <!-- <link rel="stylesheet" href="../styles/stylesadmin.css"> -->
    <link rel="stylesheet" href="../styles/sylesadd.css">
 
 </head>
 
 <body>
    <div class="nav-bg">
-      <nav class="navegacion contenedor">
+      <nav class="heading__mio ">
          <a style="font-size: 2rem;" href="../pages/homepage.html">Inicio</a>
          <a style="font-size: 2rem;" href="../pages/userdata.html">Datos Pendientes</a>
          <a style="font-size: 2rem;" href="../pages/menu.php">Menús</a>
@@ -98,10 +98,7 @@ if (isset($_POST['update_product'])) {
       </nav>
    </div>
 
-   <header style="background: none;" class="header ">
-      <h1>Menús</h1>
-   </header>
-
+         <h1 style="color: white; text-align:center">Menú</h1>
 
    <?php
 
@@ -114,7 +111,9 @@ if (isset($_POST['update_product'])) {
    ?>
    <div class="container">
 
+
       <section>
+
 
          <form action="" method="post" class="add-product-form" enctype="multipart/form-data">
             <h3>Añadir un producto</h3>
@@ -153,7 +152,7 @@ if (isset($_POST['update_product'])) {
                         <td style="color: white;"><?php echo $row['name']; ?></td>
                         <td style="color: white;">$<?php echo $row['price']; ?> Mxn.</td>
                         <td>
-                           <a href="menu.php?delete=<?php echo $row['id_Comida']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash"></i> Borrar </a>
+                           <a href="menu.php?delete=<?php echo $row['id_Comida']; ?>" class="delete-btn" onclick="return confirm('Estas Seguro de Eliminar Este Producto?');"> <i class="fas fa-trash"></i> Eliminar </a>
                            <a href="menu.php?edit=<?php echo $row['id_Comida']; ?>" class="option-btn"> <i class="fas fa-edit"></i> Actualizar </a>
                         </td>
                      </tr>

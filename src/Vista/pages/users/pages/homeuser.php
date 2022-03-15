@@ -35,7 +35,7 @@ if (isset($_POST['add_to_cart'])) {
     <link rel="stylesheet" href="/Restaurante/src/Vista/pages/users/styles/stylescliente.css"> -->
     <link rel="stylesheet" href="../styles/normalice.css">
     <!-- <link rel="stylesheet" href="../styles/stylescliente.css"> -->
-    <link rel="stylesheet" href="../styles/stails.css">
+    <!-- <link rel="stylesheet" href="../styles/stails.css"> -->
 
     <link rel="stylesheet" href="../../admin/styles/sylesadd.css">
 
@@ -133,7 +133,7 @@ if (isset($_POST['add_to_cart'])) {
     </main>
 
 
-
+    <script src="../../../pages/admin/pages/tabla.js"></script>
 
 
 </body>

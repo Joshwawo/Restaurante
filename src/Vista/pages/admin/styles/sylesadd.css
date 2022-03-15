@@ -27,15 +27,35 @@
    text-decoration: none;
    text-transform: capitalize;
 
+
+}
+
+img{
+   max-width: 100%;
+}
+
+body {
+   /* background: #0d0d0e; */
+   background-image: url(../../../images/home-bg.png);
    
 }
 
 html {
    font-size: 62.5%;
    overflow-x: hidden;
-   background-color: #0c0d0d;
+   background-image: url(../../../images/background.jpg);
+   background-attachment: fixed;
+   background-position: center;
+   overflow-x: hidden;
+   
 }
-
+.ashuda{
+   background-image: url(../../../images/background.jpg);
+   background-attachment: fixed;
+   background-position: center;
+   overflow-x: hidden;
+   
+}
 .container {
    max-width: 1200px;
    margin: 0 auto;
@@ -53,21 +73,22 @@ section {
    color: white;
    margin-bottom: 2rem;
 }
-.headermio--h1{
+
+.headermio--h1 {
    font-size: 3rem;
    text-transform: uppercase;
    color: white;
    margin-bottom: 2rem;
 }
 
-.headermio--p{
+.headermio--p {
    font-size: 1.5rem;
    text-transform: uppercase;
    color: white;
    margin-bottom: 2rem;
 }
 
-.heading__mio{
+.heading__mio {
    display: flex;
    justify-content: center;
    text-align: space-between;
@@ -76,11 +97,11 @@ section {
    color: var(--orange);
    gap: 4rem;
    padding-bottom: 1rem;
-   
+
 
 }
 
-.heading__mio a{
+.heading__mio a {
    /* text-align: center; */
    color: white;
    padding-top: 1rem;
@@ -91,15 +112,16 @@ section {
 
 }
 
-.heading__mio a:hover{
+.heading__mio a:hover {
    color: var(--orange);
    text-decoration: underline;
    text-underline-offset: 1rem;
-
-   
-
 }
-
+#lg:hover{
+   color: red;
+   text-decoration: underline;
+   text-underline-offset: 1rem;
+}
 
 
 
@@ -119,11 +141,12 @@ section {
    margin-top: 1rem;
 }
 
-.btn:hover{
+.btn:hover {
    background-color: var(--orange);
    color: var(--oscuro);
 }
-.option-btn:hover{
+
+.option-btn:hover {
    background-color: orange;
    color: var(--oscuro);
 }
@@ -391,7 +414,10 @@ section {
 }
 
 .shopping-cart table input[type="submit"] {
-   padding: .5rem 1.5rem;
+   /* padding: .5rem 1.5rem; */
+   padding: 0.5rem;
+   border-radius: .5rem;
+   margin: 1rem;
    cursor: pointer;
    font-size: 2rem;
    background-color: var(--blue);
@@ -567,23 +593,6 @@ section {
    padding: 0 .5rem;
    text-transform: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* media queries  */
 
