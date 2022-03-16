@@ -20,28 +20,28 @@
 
 var tabla = document.querySelector(".tabla");
 var dataTable = new DataTable(tabla, {
-   perPage: 5,
-   perPageSelect: [10, 20, 30, 40, 100],
+    perPage: 5,
+   perPageSelect: [5, 10, 15, 25, 30,50,100 ],
    fixedHeight: true,
    
    
 });
 
-$(document).ready(function() {
-   $(".tabla").DataTable( {
-       dom: 'Bfrtip',
-       buttons: [
-           {
-               extend: 'print',
-               messageTop: 'This print was produced using the Print button for DataTables'
-           }
-       ]
-   } );
-} );
+// $(document).ready(function() {
+//    $(".tabla").DataTable( {
+//        dom: 'Bfrtip',
+//        buttons: [
+//            {
+//                extend: 'print',
+//                messageTop: 'This print was produced using the Print button for DataTables'
+//            }
+//        ]
+//    } );
+// } );
 
 
-const texto = document.querySelector(".dataTables-empty");
-texto.textContent = 'Buscar Entre Los Pedidos';
+// const texto = document.querySelector(".dataTables-empty");
+// texto.textContent = 'Buscar Entre Los Pedidos';
 
 
 

@@ -25,15 +25,13 @@ if (isset($_GET['delete_all'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page Admin</title>
-    <link rel="icon" href="/src/Vista/images/hamburger-icon-page.ico">
     <link rel="stylesheet" href="../styles/normalice.css">
     <link rel="stylesheet" href="../../admin/styles/sylesadd.css">
     <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
-    <script src="../../admin/pages/dataTable.js" type="text/javascript"></script>
-    
+    <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
 </head>
 
-<body id="body-hp">
+<body>
 
     <div class="container">
         <nav class="heading__mio">
@@ -46,13 +44,11 @@ if (isset($_GET['delete_all'])) {
             <!--Se va a quedar pendiente  -->
 
         </nav>
-
+        <button id="btnExportar" type="submit" value="Export to Excel">Esto una prueba</button>
         <section class="shopping-cart">
             <h1 class="heading">Admin Panel <br>De Pedidos</h1>
 
-            
-
-            <table class="tabla hp">
+            <table class="tabla" >
 
                 <thead>
                     <th>Nombre</th>
@@ -63,7 +59,7 @@ if (isset($_GET['delete_all'])) {
                     <th>Productos</th>
                     <th>Precio Total</th>
                     <th>Accion</th>
-
+                    <td><a href="../../admin/pages/homepage.php?delete_all" onclick="return confirm('¿Estas Seguro que quieres eliminar todos los Pedidos?');" class="delete-btn"> <i class="fas fa-trash"></i> Eliminar Todo </a></td>
 
                 </thead>
 
@@ -104,7 +100,6 @@ if (isset($_GET['delete_all'])) {
                     ?>
 
                 </tbody>
-                <td><a href="../../admin/pages/homepage.php?delete_all" onclick="return confirm('¿Estas Seguro que quieres eliminar todos los Pedidos?');" class="delete-btn"> <i class="fas fa-trash"></i> Eliminar Todo </a></td>
             </table>
 
 
@@ -118,7 +113,17 @@ if (isset($_GET['delete_all'])) {
 
     <!-- <script src="../../.././pages/admin/pages/tabla.js"></script> -->
     <script src="../../admin/pages/tabla.js"></script>
-  
+
+    <!-- <script>
+
+        var tabla = document.querySelector("#tabla");
+        var dataTable = new DataTable(tabla,{
+            perPage:3,
+            perPageSelect:[3,6,9,12]
+        });
+
+    </script> -->
+    
 
 </body>
 

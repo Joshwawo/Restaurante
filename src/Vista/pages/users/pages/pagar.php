@@ -13,8 +13,21 @@ include('../../../../Modelo/db.php');
     $city = $_POST['colony'];
     $pc = $_POST['pc'];
     $message = $_POST['message'];
+
+    
     
  */
+
+if (isset($_GET['remove'])) {
+    $remove_id = $_GET['remove'];
+    mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$remove_id'");
+    header('location:../../users/pages/cart.php');
+};
+
+if (isset($_GET['delete_all'])) {
+    mysqli_query($conn, "DELETE FROM `cart`");
+    header('location:../../users/pages/cart.php');
+}
 if (isset($_POST['order_btn'])) {
     $name = $_POST['name'];
     $number = $_POST['number'];
@@ -80,6 +93,9 @@ if (isset($_POST['order_btn'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../admin/styles/sylesadd.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
 
     <title>Pago</title>
 </head>
@@ -198,9 +214,15 @@ if (isset($_POST['order_btn'])) {
                         <span>Mensaje <small style="font-size: 1.2rem;">*Opcional*</small> </span>
                         <input type="text" placeholder="Podrian Agregar Cubiertos Extras." name="country">
                     </div>
+                    <!-- <a href="../../users/pages/cart.php?delete_all" onclick="return confirm('¿Estas Seguro que quieres eliminar todo del carrito?');" class="delete-btn"> <i class="fas fa-trash"></i> Eliminar Todo </a> -->
+
+                    <button ><input type="submit" value="Realizar Pedido" name="order_btn" class="btn"><i>Send</i></button>
+                    
 
 
-                    <input type="submit" value="Realizar Pedido" name="order_btn" class="btn">
+
+
+                    <!-- <input type="submit" value="Realizar Pedido" name="order_btn" class="btn"> -->
 
 
 

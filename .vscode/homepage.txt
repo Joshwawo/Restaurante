@@ -25,12 +25,10 @@ if (isset($_GET['delete_all'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page Admin</title>
-    <link rel="icon" href="/src/Vista/images/hamburger-icon-page.ico">
     <link rel="stylesheet" href="../styles/normalice.css">
     <link rel="stylesheet" href="../../admin/styles/sylesadd.css">
     <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
     <script src="../../admin/pages/dataTable.js" type="text/javascript"></script>
-    
 </head>
 
 <body id="body-hp">
@@ -49,13 +47,10 @@ if (isset($_GET['delete_all'])) {
 
         <section class="shopping-cart">
             <h1 class="heading">Admin Panel <br>De Pedidos</h1>
+            <table id="tabla" class="tabla hp" >
 
-            
-
-            <table class="tabla hp">
-
-                <thead>
-                    <th>Nombre</th>
+                <thead >
+                    <th>Nombre aaq</th>
                     <th>Metodo Pago</th>
                     <th>Direccion</th>
                     <th>Colonia</th>
@@ -63,7 +58,7 @@ if (isset($_GET['delete_all'])) {
                     <th>Productos</th>
                     <th>Precio Total</th>
                     <th>Accion</th>
-
+                   
 
                 </thead>
 
@@ -118,7 +113,26 @@ if (isset($_GET['delete_all'])) {
 
     <!-- <script src="../../.././pages/admin/pages/tabla.js"></script> -->
     <script src="../../admin/pages/tabla.js"></script>
-  
+    <script src="../src/Vista/pages/admin/pages/Scripts/ExportToExcel.js"></script>
+    <script src="../src/Vista/pages/admin/pages/Scripts/FileSaver.min.js"></script>
+    <script src="../src/Vista/pages/admin/pages/Scripts/tableexport.min.js"></script>
+    <script src="../src/Vista/pages/admin/pages/Scripts/xlsx.full.min.js"></script>
+    
+
+
+
+
+
+    <!-- <script>
+
+        var tabla = document.querySelector("#tabla");
+        var dataTable = new DataTable(tabla,{
+            perPage:3,
+            perPageSelect:[3,6,9,12]
+        });
+
+    </script> -->
+    
 
 </body>
 

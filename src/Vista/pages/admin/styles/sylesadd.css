@@ -37,8 +37,21 @@ img{
 body {
    /* background: #0d0d0e; */
    background-image: url(../../../images/home-bg.png);
+   background-color: none;
    
 }
+/* #htmlhp{
+   background-color: #0d0d0e;
+   background-image: url(../../../images/home-bg.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   height: 100vh;
+   width: 100vw;
+   overflow: hidden;
+} */
+
 
 html {
    font-size: 62.5%;
@@ -49,6 +62,12 @@ html {
    overflow-x: hidden;
    
 }
+#body-hp{
+   background-color: var(--oscuro);
+
+}
+
+
 .ashuda{
    background-image: url(../../../images/background.jpg);
    background-attachment: fixed;
@@ -370,6 +389,11 @@ section {
    border: var(--border);
    border-radius: .5rem;
 }
+.products .box-container .box:hover{
+   box-shadow: var(--box-shadow-hover);
+   background-color: var(--oscuro);
+   
+}
 
 .products .box-container .box img {
    height: 25rem;
@@ -391,11 +415,19 @@ section {
    width: 100%;
 }
 
+/* .hp{
+   background-color: #000000;
+} */
+
 .shopping-cart table thead th {
    padding: 1.5rem;
    font-size: 2rem;
    color: var(--white);
-   background-color: var(--black);
+   /* background-color: var(--black); */
+   background-color: var(--oscuro);
+   /* background-color: rgb(255, 255, 255); */
+   /* background-image: url(/src/Vista/images/background.jpg); */
+   color: orange;
 }
 
 .shopping-cart table tr td {
@@ -406,14 +438,12 @@ section {
 
 }
 
-.td__admin{
+/* .td__admin{
    border-bottom: var(--border);
    padding: 1.5rem;
    font-size: 2rem;
    color: white;
-   
-
-}
+} */
 
 .shopping-cart table input[type="number"] {
    border: var(--border);
@@ -623,12 +653,13 @@ section {
 }
 
 .td__admin{
-   background-color: var(--dark-bg) ;
+   background-color: black; 
+   text-align: start;
    opacity: 0.9;
 }
 .active{
    font-size: 1.5rem;
-   background-color: #FF0006;
+   /* background-color: #FF0006; */
 }
 #text{
    font-size: 1.5rem;
@@ -642,6 +673,22 @@ section {
 
 @media (max-width:1200px) {
 
+   
+.headermio--h1 {
+   font-size: 3rem;
+   text-transform: uppercase;
+   color: white;
+   
+   margin-bottom: 2rem;
+   text-align: center;
+}
+.headermio--p {
+   font-size: 1.5rem;
+   text-transform: uppercase;
+   color: white;
+   margin-bottom: 2rem;
+   text-align: center;
+}
    .shopping-cart {
       overflow-x: scroll;
    }
@@ -664,6 +711,7 @@ section {
 
    html {
       font-size: 55%;
+      text-align: center;
    }
 
 }
@@ -714,6 +762,7 @@ section {
 
    html {
       font-size: 50%;
+      text-align: center;
    }
 
    .heading {
@@ -722,6 +771,20 @@ section {
 
    .products .box-container {
       grid-template-columns: 1fr;
+      background-color: var(--oscuro);
    }
 
+}
+
+/*!DataTables */
+
+.dataTable-pagination a{
+   color: white;
+   background-color: var(--blue);
+   color: var(--white);
+   padding: 1rem;
+   border-radius: .3rem;
+   margin: 1rem;
+   /* font-size: 1.5rem; */
+   text-decoration: none;
 }

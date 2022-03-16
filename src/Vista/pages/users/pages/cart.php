@@ -139,7 +139,8 @@ if (isset($_GET['delete_all'])) {
 
             <div class="checkout-btn">
                 <!-- <a href="../../../pages/users/pages/pagar.php" class="btn"> Pagar</a> -->
-                <a href="../../../pages/users/pages/pagar.php" class="btn <?= ($grand_total > 1) ? '' : 'disabled'; ?>">Realizar Pedido</a>
+
+                <a href="../../../pages/users/pages/pagar.php" href="../../users/pages/cart.php?delete_all" class="btn <?= ($grand_total > 1) ? '' : 'disabled'; ?>">Realizar Pedido</a>
 
             </div>
 
