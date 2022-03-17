@@ -25,7 +25,6 @@ if (isset($_GET['delete_all'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page Admin</title>
-    <link rel="icon" href="/src/Vista/images/hamburger-icon-page.ico">
     <link rel="stylesheet" href="../styles/normalice.css">
     <link rel="stylesheet" href="../../admin/styles/sylesadd.css">
     <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">

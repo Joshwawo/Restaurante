@@ -69,7 +69,7 @@ if (isset($_POST['order_btn'])) {
               <p> Tu Direccion : <span>" . $flat . ", " . $street . ", " . $city . ", - " . $pin_code . "</span> </p>
               <p> Mensaje : <span>" . $country . "</span> </p>
               <p> Tu Metodo De Pago : <span>" . $method . "</span> </p>
-              <p style='font-weight:bold' >(*Paga Cuanto El Producto Llegue*)</p>
+              <p style='font-weight:bold' ></p>
            </div>
               <a href='../../../pages/users/pages/homeuser.php' class='btn'>Continuar Comprando</a>
            </div>
@@ -167,7 +167,7 @@ if (isset($_POST['order_btn'])) {
                     </div>
                     <div class="inputBox">
                         <span>Numero De Telefono*</span>
-                        <input type="text" placeholder="Introduce Tu Numero" name="number" required>
+                        <input type="number" placeholder="Introduce Tu Numero" name="number" required>
 
                     </div>
                     <div class="inputBox">
@@ -181,7 +181,6 @@ if (isset($_POST['order_btn'])) {
 
                             <option value="Metodo" disabled selected>Elegir Metodo de Pago</option>
                             <option value="Efectivo">Efectivo</option>
-                            <option value="Tarjeta Credito/Debito">Credito o Debito</option>
                             <option value="Paypal">Paypal</option>
                         </select>
                     </div>
@@ -207,16 +206,18 @@ if (isset($_POST['order_btn'])) {
 
                     <div class="inputBox">
                         <span>Codigo Postal*</span>
-                        <input type="text" placeholder="CodigoPostal" name="pin_code" required>
+                        <input type="number" placeholder="CodigoPostal" name="pin_code" required>
                     </div>
 
                     <div class="inputBox">
                         <span>Mensaje <small style="font-size: 1.2rem;">*Opcional*</small> </span>
-                        <input type="text" placeholder="Podrian Agregar Cubiertos Extras." name="country">
+                        <input style="height: 6rem;" type="text" placeholder="Podrian Agregar Cubiertos Extras." name="country">
                     </div>
                     <!-- <a href="../../users/pages/cart.php?delete_all" onclick="return confirm('¿Estas Seguro que quieres eliminar todo del carrito?');" class="delete-btn"> <i class="fas fa-trash"></i> Eliminar Todo </a> -->
 
-                    <button ><input type="submit" value="Realizar Pedido" name="order_btn" class="btn"><i>Send</i></button>
+                   <input  type="submit" value="Confirmar Pedido" name="order_btn" class="btn">
+
+                    
                     
 
 

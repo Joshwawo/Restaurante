@@ -389,11 +389,10 @@ section {
    border: var(--border);
    border-radius: .5rem;
 }
-.products .box-container .box:hover{
-   box-shadow: var(--box-shadow-hover);
-   background-color: var(--oscuro);
-   
-}
+
+
+
+
 
 .products .box-container .box img {
    height: 25rem;
@@ -402,7 +401,13 @@ section {
 .products .box-container .box h3 {
    margin: 1rem 0;
    font-size: 2.5rem;
-   color: white;
+   color: orange;
+}
+
+.products .box-container .box:hover{
+   box-shadow: var(--box-shadow-hover);
+   background-color: var(--oscuro); 
+   color: white !important;
 }
 
 .products .box-container .box .price {
