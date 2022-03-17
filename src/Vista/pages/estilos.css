@@ -28,6 +28,17 @@ main {
     margin-top: 100px;
 }
 
+.error{
+    padding-top: 1rem;
+    color: red; 
+}
+
+.completo{
+    padding-top: 1rem;
+    color: green; 
+}
+
+
 .a {
     background-color: red;
 }
