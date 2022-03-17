@@ -12,7 +12,8 @@
         
         $direccion = $_POST['direccion'];
 /*
-//
+// /ss
+asdaasd
         $query = $connection->prepare("SELECT * FROM usuarios WHERE (id_usuario='$usuario')");
         $query->bindParam("usuario", $usuario, PDO::PARAM_STR);
         //$query->bindParam("correo", $correo_Electronico, PDO::PARAM_STR);
