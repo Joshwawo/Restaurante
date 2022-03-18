@@ -35,27 +35,33 @@
                 <form action="../../Controlador/Login/validacion.php" name="Iniciar_Sesion" method="POST"
                     class="formulario__login">
                     <h2>Iniciar Sesión</h2>
-                    <input type="text" placeholder="Correo Electronico o usuario" name="correo">
-                    <input type="password" placeholder="Contraseña" name="contrasena">
+                    <input type="text" placeholder="Correo Electronico o usuario" name="correo" required>
+                    <input type="password" placeholder="Contraseña" name="contrasena" required>
                     <button name="validacion_Login">Entrar</button>
                 </form>
 
                 <!--Register-->
                 <form action="../../Controlador/registro/registro.php" method="POST" class="formulario__register">
                     <h2>Regístrarse</h2>
-                    <input type="text" id="nombre" placeholder="Nombre completo" name="nombre_completo">
-                    <input type="email" id="correo" placeholder="Correo Electronico" name="correo_Electronico">
-                    <input type="text" id="usuario" placeholder="Usuario" name="usuario">
-                    <input type="password" id="contrasena" placeholder="Contraseña" name="contrasena">
-                    <input type="text" id="direct" placeholder="Dirección" name="direccion">
+                    <input pattern="[a-zA-Z ]{2,254}" title="Solo Letras" type="text" id="nombre"
+                        placeholder="Nombre completo" name="nombre_completo" required>
+                    <input type="email" id="correo"
+                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
+                        title="Correo@correo.com" placeholder="Correo Electronico" name="correo_Electronico" required>
+                    <input type="text" id="usuario" placeholder="Usuario" name="usuario" required>
+                    <input type="password" id="contrasena" placeholder="Contraseña" name="contrasena" required>
+                    <input type="text" id="direct" placeholder="Dirección" name="direccion" required>
                     <button name="Registrarte">Regístrarse</button>
+
                 </form>
             </div>
         </div>
 
     </main>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+
+    <script src="../pages/script.js"></script>
 </body>
 
 </html>

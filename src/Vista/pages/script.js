@@ -64,6 +64,7 @@ function register() {
         caja_trasera_login.style.opacity = "1";
     }
 }
+
 const datos = {
     nombre: '',
     correo: '',
@@ -86,59 +87,58 @@ const formulario = document.querySelector('.formulario__register');
 
 
 
-nombreInput.addEventListener('input', leerTexto);
-coreoInput.addEventListener('input', leerTexto);
-usuarioInput.addEventListener('input', leerTexto);
-contrasenaInput.addEventListener('input', leerTexto);
-directInput.addEventListener('input', leerTexto);
+// nombreInput.addEventListener('input', leerTexto);
+// coreoInput.addEventListener('input', leerTexto);
+// usuarioInput.addEventListener('input', leerTexto);
+// contrasenaInput.addEventListener('input', leerTexto);
+// directInput.addEventListener('input', leerTexto);
 
-formulario.addEventListener('submit', function (e) {
+// formulario.addEventListener('submit', function (e) {
+//     // e.defaultPrevented();
+//     const { nombre, correo, usuario, contrasena, direct } = datos;
+//     if (nombre === '' || correo === '' || usuario === '' || contrasena === '' || direct == '') {
+//         mostrarError('todos los campos son obligatorios');
 
+//         return;
+//     }
 
-    const { nombre, correo, usuario, contrasena, direct } = datos;
-    if (nombre === '' || correo === '' || usuario === '' || contrasena === '' || direct == '') {
-        mostrarError('todos los campos son obligatorios');
-
-        return;
-    }
-
-    mostrarRegistro('Te has Registrado Correctamente!');
-
-
-});
-
-function mostrarError(mensaje) {
-    const error = document.createElement('P');
-    error.textContent = mensaje;
-    error.classList.add('error');
-    formulario.appendChild(error)
-    console.log(error);
-
-    setTimeout(() => {
-        error.remove();
-
-    }, 3000);
-
-}
-
-function mostrarRegistro(mensaje) {
-    const completo = document.createElement('P');
-    completo.textContent = mensaje;
-    completo.classList.add('completo');
-    formulario.appendChild(completo)
-    console.log(completo);
-
-    setTimeout(() => {
-        completo.remove();
-    }, 3000);
-}
+//     mostrarRegistro('Te has Registrado Correctamente!');
 
 
+// });
 
-function leerTexto(e) {
-    datos[e.target.id] = e.target.value;
-    console.log(e.target.value);
-}
+// function mostrarError(mensaje) {
+//     const error = document.createElement('P');
+//     error.textContent = mensaje;
+//     error.classList.add('error');
+//     formulario.appendChild(error)
+//     console.log(error);
+
+//     setTimeout(() => {
+//         error.remove();
+
+//     }, 3000);
+
+// }
+
+// function mostrarRegistro(mensaje) {
+//     const completo = document.createElement('P');
+//     completo.textContent = mensaje;
+//     completo.classList.add('completo');
+//     formulario.appendChild(completo)
+//     console.log(completo);
+
+//     setTimeout(() => {
+//         completo.remove();
+//     }, 3000);
+// }
+
+
+
+// function leerTexto(e) {
+//     datos[e.target.id] = e.target.value;
+//     console.log(e.target.value);
+// }
 
 
 

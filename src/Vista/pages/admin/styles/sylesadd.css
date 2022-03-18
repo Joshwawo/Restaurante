@@ -63,7 +63,7 @@ html {
    
 }
 #body-hp{
-   background-color: var(--oscuro);
+   background-color: var(--dark-bg);
 
 }
 
@@ -432,9 +432,13 @@ section {
    background-color: var(--oscuro);
    /* background-color: rgb(255, 255, 255); */
    /* background-image: url(/src/Vista/images/background.jpg); */
-   color: orange;
-}
+   color: whitesmoke;
+   text-transform: uppercase;
 
+}
+.dataTable-sorter{
+   text-transform: uppercase;
+}
 .shopping-cart table tr td {
    border-bottom: var(--border);
    padding: 1.5rem;
@@ -658,10 +662,12 @@ section {
 }
 
 .td__admin{
-   background-color: black; 
+   /* background-color: black;  */
+   background-image: url(/src/Vista/images/background.jpg);
    text-align: start;
    opacity: 0.9;
 }
+
 .active{
    font-size: 1.5rem;
    /* background-color: #FF0006; */
@@ -785,7 +791,7 @@ section {
 
 .dataTable-pagination a{
    color: white;
-   background-color: var(--blue);
+   background-color: white;
    color: var(--white);
    padding: 1rem;
    border-radius: .3rem;

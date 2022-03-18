@@ -163,16 +163,16 @@ if (isset($_POST['order_btn'])) {
                 <div class="flex">
                     <div class="inputBox">
                         <span>Nombre*</span>
-                        <input type="text" placeholder="Introduce Tu Nombre Completo*" name="name" required>
+                        <input pattern="[a-zA-Z ]{2,254}" title="Solo Letras" type="text" placeholder="Introduce Tu Nombre Completo*" name="name" required>
                     </div>
                     <div class="inputBox">
                         <span>Numero De Telefono*</span>
-                        <input type="number" placeholder="Introduce Tu Numero" name="number" required>
+                        <input title="Solo numeros" pattern="^[0-9]+" min="10" max="10" type="text" placeholder="Introduce Tu Numero" name="number" required>
 
                     </div>
                     <div class="inputBox">
                         <span>Tu Email*</span>
-                        <input type="email" placeholder="Introduce Tu Email" name="email" required>
+                        <input pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" title="correo@correo.com" type="email" placeholder="Introduce Tu Email" name="email" required>
                     </div>
 
                     <div class="inputBox">
@@ -204,21 +204,23 @@ if (isset($_POST['order_btn'])) {
                         <input type="text" placeholder="Undefined" name="state" >
                     </div> -->
 
-                    <div class="inputBox">
+                    <!-- <div class="inputBox">
                         <span>Codigo Postal*</span>
-                        <input type="number" placeholder="CodigoPostal" name="pin_code" required>
-                    </div>
+                        <input 
+                        pattern="/^(?:0[1-9]|[1-4]\d|5[0-2])\d{3}$/"
+                         type="number" placeholder="CodigoPostal" name="pin_code" required>
+                    </div> -->
 
                     <div class="inputBox">
                         <span>Mensaje <small style="font-size: 1.2rem;">*Opcional*</small> </span>
-                        <input style="height: 6rem;" type="text" placeholder="Podrian Agregar Cubiertos Extras." name="country">
+                        <input  type="text" placeholder="Podrian Agregar Cubiertos Extras." name="country">
                     </div>
                     <!-- <a href="../../users/pages/cart.php?delete_all" onclick="return confirm('¿Estas Seguro que quieres eliminar todo del carrito?');" class="delete-btn"> <i class="fas fa-trash"></i> Eliminar Todo </a> -->
 
-                   <input  type="submit" value="Confirmar Pedido" name="order_btn" class="btn">
+                    <input type="submit" value="Confirmar Pedido" name="order_btn" class="btn">
 
-                    
-                    
+
+
 
 
 

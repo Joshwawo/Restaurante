@@ -32,7 +32,7 @@ if (isset($_GET['delete_all'])) {
     
 </head>
 
-<body id="body-hp">
+<body >
 
     <div class="container">
         <nav class="heading__mio">
@@ -51,7 +51,7 @@ if (isset($_GET['delete_all'])) {
 
             
 
-            <table class="tabla hp">
+            <table  class="tabla hp">
 
                 <thead>
                     <th>Nombre</th>

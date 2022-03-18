@@ -1,17 +1,17 @@
-<?php 
-    include('../../Modelo/db.php');
-    if(isset($_POST['Registrarte'])){
+<?php
+include('../../Modelo/db.php');
+if (isset($_POST['Registrarte'])) {
 
-      
 
-        /*  Datos de registro*/
-        $nombre_completo = $_POST['nombre_completo'];
-        $correo_Electronico = $_POST['correo_Electronico'];
-        $usuario = $_POST['usuario'];
-        $contrasena  = $_POST['contrasena'];
-        
-        $direccion = $_POST['direccion'];
-/*
+
+    /*  Datos de registro*/
+    $nombre_completo = $_POST['nombre_completo'];
+    $correo_Electronico = $_POST['correo_Electronico'];
+    $usuario = $_POST['usuario'];
+    $contrasena  = $_POST['contrasena'];
+    $direccion = $_POST['direccion'];
+    $contrasena=hash('sha512',$contrasena);
+    /*
 // /ss
 asdaasd
         $query = $connection->prepare("SELECT * FROM usuarios WHERE (id_usuario='$usuario')");
@@ -42,18 +42,46 @@ asdaasd
 
         }
 
+
 */
-        $query_Usuarios = "INSERT INTO usuarios(id_usuario, contrasena, nombreCompleto, correo, direccion)
+    $query_Usuarios = "INSERT INTO usuarios(id_usuario, contrasena, nombreCompleto, correo, direccion)
         Values ('$usuario', '$contrasena', '$nombre_completo', '$correo_Electronico', '$direccion')";
+        
 
-        $result_Query = mysqli_query($conn, $query_Usuarios);
-
-        echo '<Script language="javascript">alert("Datos guardados correctamente"</script>';
-        session_abort();
-        header("Location: ../../Vista/pages/login.html");
-            $_SESSION['message'] = 'Datos guardados con exito';
-            $_SESSION['message_type'] = 'succes';
-
-
-
+    //Verificar que el usuario no exista en la base de datos
+    
+    $verificar_usuario = mysqli_query($conn,"SELECT * FROM usuarios WHERE correo='$usuario'");
+    if(mysqli_num_rows($verificar_usuario)>0){
+        echo '<script>
+                alert("El Usuario ya está registrado");
+                window.location="/Restaurante/src/Vista/pages/login.html";
+               
+              </script>';
+        ;
+        exit();
     }
+
+    
+    $verificar_correo = mysqli_query($conn,"SELECT * FROM usuarios WHERE correo='$correo_Electronico'");
+    if(mysqli_num_rows($verificar_correo)>0){
+        echo '<script>
+                alert("Esta Direccion de correo  ya está registrado");
+                window.location="/Restaurante/src/Vista/pages/login.html";
+               
+              </script>';
+        ;
+        exit();
+    }
+
+    
+
+
+
+    $result_Query = mysqli_query($conn, $query_Usuarios);
+
+    echo '<Script language="javascript">alert("Datos guardados correctamente"</script>';
+    session_abort();
+    header("Location: ../../Vista/pages/login.html");
+    $_SESSION['message'] = 'Datos guardados con exito';
+    $_SESSION['message_type'] = 'succes';
+}
