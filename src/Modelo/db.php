@@ -6,7 +6,13 @@
     $conn = mysqli_connect(
         'localhost',
         'root',
-        '',
-        'Restaurante'
+        'root',
+        'restaurante'
     );
+
+//     if (!$conn) {
+//     echo "Error en la conexion";
+// } else {
+//     echo "Conexion Correcta A la base de datos";
+// }
 ?>

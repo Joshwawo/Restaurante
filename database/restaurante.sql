@@ -33,7 +33,37 @@ create table Factura(
     id_usuario varchar(50) not null,
     fechadeFactura date not null,
     total decimal(5,2) not null,
+    id_order int(255) not null,
+    id int(255) not null,
+    id_Pedido int(50) not null,
     constraint PK_FACTURA_ID Primary key(id_factura)
+);
+
+Create table cart(
+    id int(255) not null AUTO_INCREMENT,
+    `name` varchar(255) not null,
+    price varchar(255) not null,
+    `image` varchar(255) not null,
+    quantity int(255) not null,
+    constraint PK_id_Pedido Primary key(id)
+);
+
+
+Create table `Order`(
+    id_order int(255) not null AUTO_INCREMENT,
+    `name` varchar(100) not null,
+    `number` varchar (100) not null,
+    email varchar (100) not null,
+    method varchar (100) not null,
+    flat varchar (100) not null,
+    street varchar (255) not null,
+    city varchar (100) not null,
+    `state` varchar (100) not null,
+    country varchar (100) not null,
+    pin_code int (10) not null,
+    total_products varchar (255) not null,
+    total_price varchar (255) not null,
+    constraint PK_ID_ORDER Primary key(id_order)
 );
 
 Alter table Factura
@@ -49,5 +79,27 @@ foreign key(id_usuario)
 References Usuarios(id_usuario)
 ON update CASCADE
 on delete CASCADE;
+
+Alter table Factura
+add constraint PK_ID_ORDER
+foreign key(id_order)
+References `Order`(id_order)
+ON update CASCADE
+on delete CASCADE;
+
+Alter table Factura
+add constraint PK_id_Pedido
+foreign Key(id)
+References cart(id)
+ON update CASCADE
+on delete CASCADE;
+
+Alter table Factura
+add constraint PK_Pedido_ID_Pedido
+foreign Key(id_Pedido)
+References Pedido(id_Pedido)
+ON update CASCADE
+on delete CASCADE;
+
 
 

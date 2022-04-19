@@ -10,7 +10,7 @@ if (isset($_POST['Registrarte'])) {
     $usuario = $_POST['usuario'];
     $contrasena  = $_POST['contrasena'];
     $direccion = $_POST['direccion'];
-    $contrasena=hash('sha512',$contrasena);
+    // $contrasena=hash('sha512',$contrasena);
     /*
 // /ss
 asdaasd

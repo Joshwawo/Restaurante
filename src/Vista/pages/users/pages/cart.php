@@ -112,7 +112,7 @@ if (isset($_GET['delete_all'])) {
                                     <form action="" method="POST">
                                         <input type="hidden" name="update_quantity_id" value="<?php echo $fetch_cart['id']; ?>">
                                         <input type="number" name="update_quantity" min="1" value="<?php echo $fetch_cart['quantity']; ?>">
-                                        <input type="submit" value="Actualizar" name="update_update_btn">
+                                        <input type="submit" value="Actualizar Cantidades" name="update_update_btn">
                                     </form>
                                 </td>
                                 <td>$<?php echo $sub_total = number_format($fetch_cart['price'] * $fetch_cart['quantity']); ?> Mxn.</td>

@@ -92,7 +92,7 @@ if (isset($_GET['delete_all'])) {
                                 <td class="td__admin"><?php echo $fetch_cart['total_products'] ?></td>
 
                                 <td class="td__admin"><?php echo $fetch_cart['total_price'] ?> Mxn.</td>
-                                <td class="td__admin"><a href="?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('¿Estas Seguro de eliminar esto del carrito?')" class="delete-btn"> <i class="fas fa-trash"></i> Eliminar</a></td>
+                                <!-- <td class="td__admin"><a href="?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('¿Estas Seguro de eliminar esto del carrito?')" class="delete-btn">  Eliminar</a></td> -->
 
                             </tr>
 
