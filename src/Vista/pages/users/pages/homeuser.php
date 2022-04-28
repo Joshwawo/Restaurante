@@ -109,9 +109,11 @@ if (isset($_POST['add_to_cart'])) {
                                     <input type="hidden" name="product_name" value="<?php echo $fetch_comida['name']; ?>">
                                     <input type="hidden" name="product_price" value="<?php echo $fetch_comida['price']; ?>">
                                     <input type="hidden" name="product_image" value="<?php echo $fetch_comida['image']; ?>">
-
-
+                                    
+            
+                                    
                                     <input type="submit" class="btn" value="Agregar al Carrito" name="add_to_cart">
+                                    
                                 </div>
 
                             </form>

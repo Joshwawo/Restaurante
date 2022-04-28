@@ -267,15 +267,16 @@
 
             </div>
 
-            <form action="mandar.php">
+            <form action="mandar.php" name="Registro_Info" method="post">
                <input data-aos="fade-up" name="nombre" data-aos-delay="150" type="text" placeholder="Nombre Completo"
                   class="box">
                <input data-aos="fade-up" name="email" data-aos-delay="300" type="email" placeholder="email" class="box">
                <input data-aos="fade-up" name="telefono" data-aos-delay="450" type="number" placeholder="Telefono"
                   class="box">
-               <textarea data-aos="fade-up" data-aos-delay="600" name="" placeholder="Algun comentario" class="box"
+               <textarea data-aos="fade-up" data-aos-delay="600" name="texto" placeholder="Algun comentario" class="box"
                   id="" cols="30" rows="10"></textarea>
-               <input data-aos="fade-up" data-aos-delay="750" type="submit" value="enviar" class="btn">
+                  <button name="Enviar"data-aos="fade-up" data-aos-delay="750"  class="btn">Enviar</button>
+               <!--<input data-aos="fade-up" data-aos-delay="750" type="submit" value="enviar" name="Enviar" class="btn">-->
             </form>
 
          </div>
