@@ -41,6 +41,58 @@ body {
   overflow-x: hidden;
 }
 
+/*Mejoras al botones
+
+*/
+.vermas{
+  color: #eacf4f;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row-reverse;
+}
+/* .btn-vermas {
+  display: inline-block;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #fff;
+  border: 0.2rem solid rgba(255, 255, 255, 0.3);
+  background: no-repeat;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+ 
+} */
+.asd{
+   background: yellow;
+  height: 150px;
+  /*IMPORTANTE*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-vermas {
+  display: inline-block;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #fff;
+  border: 0.2rem solid rgba(255, 255, 255, 0.3);
+  background: no-repeat;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+ 
+}
+
+.btn-vermas:hover {
+  color: #000;
+  background: #fff;
+}
+
+
+
+
+
+
 section {
   padding: 3rem 9%;
 }

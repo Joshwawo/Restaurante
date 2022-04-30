@@ -375,6 +375,17 @@ section {
    text-transform: none;
 }
 
+.products .box-container .box p{
+   color: white;
+   font-size: 1.7rem;
+   text-align: start;
+   margin: 0;
+   padding: .5rem;
+}
+.products .box-container .box span{
+   color: orange;
+}
+
 .products .box-container {
    display: grid;
    grid-template-columns: repeat(auto-fit, 30rem);

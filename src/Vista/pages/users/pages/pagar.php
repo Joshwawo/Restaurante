@@ -60,15 +60,15 @@ if (isset($_POST['order_btn'])) {
            <h3>Gracias Por Tu Compra!</h3>
            <div class='order-detail'>
               <span>" . $total_product . "</span>
-              <span class='total'>Su total : $" . $price_total . " Mxn.  </span>
+              <span class='total'>Su total: $" . $price_total . " Mxn.  </span>
            </div>
            <div class='customer-details'>
-              <p> Tu Nombre : <span>" . $name . "</span> </p>
-              <p> Tu numero : <span>" . $number . "</span> </p>
-              <p> Tu email : <span>" . $email . "</span> </p>
-              <p> Tu Direccion : <span>" . $flat . ", " . $street . ", " . $city . ", - " . "</span> </p>
-              <p> Mensaje : <span>" . $country . "</span> </p>
-              <p> Tu Metodo De Pago : <span>" . $method . "</span> </p>
+              <p> Tu Nombre: <span>" . $name . "</span> </p>
+              <p> Tu numero: <span>" . $number . "</span> </p>
+              <p> Tu email: <span>" . $email . "</span> </p>
+              <p> Tu Direccion: <span>" . $flat . ", " . $street . ", " . $city . " " . "</span> </p>
+              <p> Mensaje: <span>" . $country . "</span> </p>
+              <p> Tu Metodo De Pago: <span>" . $method . "</span> </p>
               <p style='font-weight:bold' ></p>
            </div>
               <a href='../../../pages/users/pages/homeuser.php' class='btn'>Continuar Comprando</a>
