@@ -29,10 +29,10 @@ if (isset($_GET['delete_all'])) {
     <link rel="stylesheet" href="../../admin/styles/sylesadd.css">
     <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
     <script src="../../admin/pages/dataTable.js" type="text/javascript"></script>
-    
+
 </head>
 
-<body >
+<body>
 
     <div class="container">
         <nav class="heading__mio">
@@ -49,20 +49,20 @@ if (isset($_GET['delete_all'])) {
         <section class="shopping-cart">
             <h1 class="heading">Admin Panel <br>De Pedidos</h1>
 
-            
 
-            <table  class="tabla hp">
+
+            <table id="tablax" class="tabla hp">
 
                 <thead>
                     <th>Nombre</th>
                     <th>Metodo Pago</th>
                     <th>Direccion</th>
-                    <th>Colonia</th>
+                    <th>Telefono</th>
                     <th>Comentario</th>
                     <th>Productos</th>
                     <th>Precio Total</th>
-                  
-                    
+
+
 
 
                 </thead>
@@ -87,13 +87,13 @@ if (isset($_GET['delete_all'])) {
                             <tr>
                                 <td class="td__admin"><?php echo $fetch_cart['name'] ?></td>
                                 <td class="td__admin"><?php echo $fetch_cart['method'] ?></td>
-                                <td class="td__admin"><?php echo $fetch_cart['flat'] ?></td>
-                                <td class="td__admin"><?php echo $fetch_cart['city'] ?></td>
+                                <td class="td__admin"><?php echo $fetch_cart['flat'] . "," . $fetch_cart['city'] ?></td>
+                                <td class="td__admin"><?php echo $fetch_cart['number'] ?></td>
                                 <td class="td__admin"><?php echo $fetch_cart['country'] ?></td>
                                 <td class="td__admin"><?php echo $fetch_cart['total_products'] ?></td>
 
                                 <td class="td__admin"><?php echo $fetch_cart['total_price'] ?> Mxn.</td>
-                                 <!-- <td class="td__admin"><a href="?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('¿Estas Seguro de eliminar esto del carrito?')" class="delete-btn">  Eliminar</a></td> -->
+                                <!-- <td class="td__admin"><a href="?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('¿Estas Seguro de eliminar esto del carrito?')" class="delete-btn">  Eliminar</a></td> -->
 
                             </tr>
 
@@ -105,6 +105,7 @@ if (isset($_GET['delete_all'])) {
 
                 </tbody>
                 <td><a href="../../admin/pages/homepage.php?delete_all" onclick="return confirm('¿Estas Seguro que quieres eliminar todos los Pedidos?');" class="delete-btn"> <i class="fas fa-trash"></i> Eliminar Todo </a></td>
+                <button style="background-color: yellow;" id="btnExportar" class="delete-btn "> Exportar a Excel</button>
             </table>
 
 
@@ -117,8 +118,26 @@ if (isset($_GET['delete_all'])) {
     </div>
 
     <!-- <script src="../../.././pages/admin/pages/tabla.js"></script> -->
-    <script src="../../admin/pages/tabla.js"></script>
-  
+    <!-- <script src="../../admin/pages/tabla.js"></script>
+    <script src="../../admin/pages/ExportToExcel.js"></script>
+    <script src="../../admin/pages/tableexport.min.js"></script>
+    <script src="../../admin/pages/xlsx.full.min.js"></script> -->
+    <script src="src/jquery.table2excel.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#btnExportar").click(function() {
+                $("#tablax").table2excel({
+                    // exclude CSS class
+                    exclude: ".noExl",
+                    name: "Worksheet Name",
+                    filename: "SomeFile", //do not include extension
+                    fileext: ".xls" // file extension
+                });
+            });
+        });
+    </script>
 
 </body>
 
