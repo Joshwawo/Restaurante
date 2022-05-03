@@ -9,7 +9,7 @@ if (isset($_POST['Registrarte'])) {
     $correo_Electronico = $_POST['correo_Electronico'];
     $usuario = $_POST['usuario'];
     $contrasena  = $_POST['contrasena'];
-    $direccion = $_POST['direccion'];
+    // $direccion = $_POST['direccion'];
     // $contrasena=hash('sha512',$contrasena);
     /*
 // /ss
@@ -44,8 +44,8 @@ asdaasd
 
 
 */
-    $query_Usuarios = "INSERT INTO usuarios(id_usuario, contrasena, nombreCompleto, correo, direccion)
-        Values ('$usuario', '$contrasena', '$nombre_completo', '$correo_Electronico', '$direccion')";
+    $query_Usuarios = "INSERT INTO usuarios(id_usuario, contrasena, nombreCompleto, correo)
+        Values ('$usuario', '$contrasena', '$nombre_completo', '$correo_Electronico' )";
         
 
     //Verificar que el usuario no exista en la base de datos
@@ -77,10 +77,12 @@ asdaasd
 
 
 
-    $result_Query = mysqli_query($conn, $query_Usuarios);
+    // $result_Query = mysqli_query($conn, $query_Usuarios);
 
     echo '<Script language="javascript">alert("Datos guardados correctamente"</script>';
     session_abort();
+    header("Location: ../../Vista/pages/login.html");
+      
     header("Location: ../../Vista/pages/login.html");
     $_SESSION['message'] = 'Datos guardados con exito';
     $_SESSION['message_type'] = 'succes';

@@ -17,6 +17,8 @@ function playAnimation() {
         buttonIcon.innerHTML = "check";
         buttonIcon.style.fontWeight = "bold";
     }, 1500);
+
+    /* Changing the button's background color, text color, and box shadow after 1.8 seconds. */
     setTimeout(() => {
         button.style.backgroundColor = "#0c0d0d";
         button.style.color = "#F8F8F8";
@@ -24,6 +26,8 @@ function playAnimation() {
     }, 1800);
 
 }
+
+/* Resetting the button to its original state after 5 seconds. */
 setTimeout(() => {
     buttonText.style.animation = "none";
     buttonIcon.style.animation = "none"; 

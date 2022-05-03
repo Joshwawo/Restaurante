@@ -7,7 +7,7 @@
         'localhost',
         'root',
         'root',
-        'restaurante'
+        'restaurantess'
     );
 
 //     if (!$conn) {
